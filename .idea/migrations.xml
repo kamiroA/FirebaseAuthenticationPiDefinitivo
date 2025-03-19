@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectMigrations">
+    <option name="MigrateToGradleLocalJavaHome">
+      <set>
+        <option value="$PROJECT_DIR$/FirebaseAuthenticationPI_Base-proyect_funcional/FirebaseAuthenticationPI_Base-proyect_funcional" />
+      </set>
+    </option>
+  </component>
+</project>
