@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Registro"
+    android:background="@color/grafito">
+     <ScrollView
+
+         android:id="@+id/sVRegistro"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:background="@drawable/borde_app">
+    <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+        android:orientation="vertical"
+
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:id="@+id/topnav"
+            android:layout_gravity="center_horizontal"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@color/transparent"
+
+
+            >
+
+            <Button
+                android:id="@+id/btnBack"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/arrow_back"
+                android:scaleType="centerCrop"
+                android:text="Boton Back"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+
+
+                />
+
+            <TextView
+                android:id="@+id/tvRegistro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Registro"
+                android:textAlignment="center"
+                android:textColor="@color/turquesa"
+                android:textSize="30sp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                />
+
+            <ImageView
+                android:id="@+id/lineaArriba"
+             android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:src="@drawable/sombra"
+                app:layout_constraintBottom_toBottomOf="@id/topnav"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginBottom="60dp">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/btnUploadProfilePic"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="20dp"
+
+                    android:background="@drawable/borde_elipse"
+                    android:clickable="true"
+                    android:scaleType="centerCrop"
+                    app:shapeAppearanceOverlay="@style/CircularImageViewStyle"
+                    app:srcCompat="@drawable/edit_profile" />
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Selecciona foto \nde usuario"
+                    android:textAlignment="center"
+                    android:textColor="@color/turquesa"
+                    android:textSize="14sp"
+
+                    />
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="380dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tiNombre"
+                    android:layout_marginTop="20dp"
+
+                    android:textColorHint="@color/white"
+                    android:paddingBottom="24dp">
+
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/etNombre"
+                        android:hint="Nombre"
+                        android:text="Nombre"
+                        android:textColor="@color/white" />
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="5dp"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/sombra"
+                        android:translationY="-3dp"
+                        android:layout_marginBottom="10dp"
+
+
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="380dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tiApellido"
+
+
+                    android:textColorHint="@color/white"
+                    android:paddingBottom="24dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/etApellido"
+                        android:hint="Apellido"
+                        android:text="Apellido"
+                        android:textColor="@color/white" />
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="5dp"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/sombra"
+                        android:translationY="-3dp"
+                        android:layout_marginBottom="10dp"
+
+
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="380dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tiEmail"
+                    app:layout_constraintTop_toBottomOf="@+id/tvRegistro"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:textColorHint="@color/white"
+                    android:paddingBottom="24dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/etEmail"
+                        android:hint="@string/introduce_el_email"
+                        android:text="@string/email"
+                        android:inputType="textEmailAddress"
+                        android:textColor="@color/white" />
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="5dp"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/sombra"
+                        android:translationY="-3dp"
+                        android:layout_marginBottom="10dp"
+
+
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+
+
+
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="380dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tiPassword"
+                    app:layout_constraintTop_toBottomOf="@+id/tiEmail"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:textColorHint="@color/white"
+                    android:paddingBottom="24dp"
+                    app:endIconMode="password_toggle"
+                    app:endIconTint="@color/turquesa"
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/etPassword"
+                        android:hint="@string/introduce_contrasena"
+                        android:text="@string/contrasena"
+                        android:inputType="textPassword"
+                        android:textColor="@color/white"
+
+                        />
+
+
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="5dp"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/sombra"
+                        android:translationY="-3dp"
+                        android:layout_marginBottom="10dp"
+
+
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="380dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tiPasswordConfirm"
+                    app:layout_constraintTop_toBottomOf="@+id/tiEmail"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:textColorHint="@color/white"
+                    android:paddingBottom="24dp"
+                    app:endIconMode="password_toggle"
+                    app:endIconTint="@color/turquesa">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/etPasswordConfirm"
+                        android:hint="Confirma la Contraseña"
+                        android:text="@string/contrasena"
+                        android:inputType="textPassword"
+                        android:textColor="@color/white" />
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="5dp"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/sombra"
+                        android:translationY="-3dp"
+                        android:layout_marginBottom="10dp"
+
+
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btnRegistro"
+                    android:text="@string/btn_registro"
+                    android:background="@drawable/botones"
+                    android:textColor="@color/black"
+
+                    android:layout_marginTop="40dp"
+                    android:textStyle="bold"/>
+
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/btnRegistro"
+                    android:gravity="center"
+                    android:text="¿Ya tienes cuenta?"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:layout_marginTop="12dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvClickLogin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/btnRegistro"
+                    android:gravity="center"
+                    android:text="Haz click aqui"
+                    android:textColor="@color/turquesa"
+                    android:textSize="15sp"
+
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+
+   </LinearLayout>
+</ScrollView>
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:visibility="gone"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

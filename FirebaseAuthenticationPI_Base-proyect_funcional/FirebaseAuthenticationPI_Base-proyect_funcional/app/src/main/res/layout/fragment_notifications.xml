@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.notifications.NotificationsFragment"
+    android:background="@color/grafito">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/borde_app"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/baseLayout"
+            android:layout_width="match_parent"
+            android:layout_height="770dp"
+
+            android:gravity="center"
+            android:orientation="vertical"
+
+            >
+
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="-20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="40dp"
+
+                        >
+
+
+                        <ImageButton
+                            android:id="@+id/mainHome"
+                            android:layout_width="28dp"
+                            android:layout_height="28dp"
+                            android:layout_marginStart="36dp"
+                            android:layout_marginEnd="335dp"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:background="@color/transparent"
+
+
+
+                            android:layout_marginBottom="10dp"
+                            android:src="@drawable/home"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.0" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:text="Perfil"
+
+
+                            android:textColor="@color/turquesa"
+                            android:textSize="30sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <Button
+                            android:layout_width="28dp"
+                            android:layout_height="28dp"
+                            android:layout_marginBottom="10dp"
+                            android:background="@drawable/buzon_mensajes"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.926"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="3dp"
+                            android:src="@drawable/sombra"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/profileImage"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="@drawable/borde_elipse"
+
+                        android:scaleType="centerCrop"
+                        app:shapeAppearanceOverlay="@style/CircularImageViewStyle"
+                        android:src="@drawable/edit_profile" />
+
+                    <!-- Nombre del usuario -->
+                    <TextView
+                        android:id="@+id/tvNombre"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="Nombre"
+                        android:textAlignment="center"
+                        android:textColor="@color/turquesa"
+                        android:textSize="18sp"
+                        android:textAllCaps="true"/>
+
+                    <!-- Apellidos del usuario -->
+                    <TextView
+                        android:id="@+id/tvApellidos"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="Apellidos"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        android:textAllCaps="true"/>
+
+                    <!-- Email del usuario -->
+                    <TextView
+                        android:id="@+id/tvEmail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="Email"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="14dp"
+                            android:layout_height="14dp"
+                            android:src="@drawable/trophy_cup_perfil" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="2dp"
+                            android:text="Mi progreso"
+                            android:textAlignment="center"
+                            android:textColor="@color/turquesa"
+                            android:textSize="14sp"
+
+                            />
+
+
+                    </LinearLayout>
+
+
+                    <ScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:paddingTop="20dp"
+
+                            >
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="5dp"
+                                android:src="@drawable/sombra"
+
+                                />
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+
+
+                                    >
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="50dp"
+                                        android:text="25 %"
+                                        android:textColor="@color/turquesa"
+                                        android:textSize="12sp"
+
+
+                                        />
+
+                                    <ProgressBar
+
+                                        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                                        android:layout_width="75dp"
+                                        android:layout_height="15dp"
+                                        android:layout_marginStart="25dp"
+                                        android:background="@drawable/botones"
+                                        android:max="100"
+
+                                        android:padding="5dp"
+
+                                        android:progress="25"
+                                        android:progressBackgroundTint="@color/turquesa"
+                                        android:progressTint="@color/black"
+
+                                        >
+
+                                    </ProgressBar>
+                                </LinearLayout>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="30dp"
+                                    android:text="101 Experiencias Gastronomicas\nBurgos"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/white"
+                                    android:textSize="18sp"
+
+                                    />
+
+
+                            </LinearLayout>
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="6dp"
+                                android:layout_marginBottom="40dp"
+                                android:src="@drawable/sombra"
+                                />
+
+                        </LinearLayout>
+
+                    </ScrollView>
+
+                    <Button
+
+                        android:id="@+id/btnLogout"
+                        android:layout_width="210dp"
+                        android:layout_height="wrap_content"
+
+
+                        android:background="@drawable/botones"
+                        android:backgroundTint="@color/rojo"
+                        android:text="Cerrar Sesión"
+                        android:textColor="@color/black" />
+
+
+                </LinearLayout>
+
+
+            </ScrollView>
+
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
