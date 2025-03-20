@@ -10,16 +10,15 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
-import dam.pmdm.firebaseauthenticationpi.Desafio;
-import dam.pmdm.firebaseauthenticationpi.R;
-
 public class DesafioAdapter extends RecyclerView.Adapter<DesafioAdapter.DesafioViewHolder> {
 
     private List<Desafio> desafios;
+    private List<String> experienciasDelUsuario; // Lista de experiencias del usuario
     private OnDesafioClickListener onDesafioClickListener;
 
-    public DesafioAdapter(List<Desafio> desafios, OnDesafioClickListener onDesafioClickListener) {
+    public DesafioAdapter(List<Desafio> desafios, List<String> experienciasDelUsuario, OnDesafioClickListener onDesafioClickListener) {
         this.desafios = desafios;
+        this.experienciasDelUsuario = experienciasDelUsuario; // Inicializa la lista de experiencias del usuario
         this.onDesafioClickListener = onDesafioClickListener;
     }
 
@@ -35,8 +34,29 @@ public class DesafioAdapter extends RecyclerView.Adapter<DesafioAdapter.DesafioV
         Desafio desafio = desafios.get(position);
         holder.tvNombreDesafio.setText(desafio.getNombre());
 
+        // Verificar si hay nuevas experiencias
+        if (hayNuevasExperiencias(desafio)) {
+            holder.tvNombreDesafio.append(" (Nuevas)");
+        }
+
         // Configurar el clic en el elemento
         holder.itemView.setOnClickListener(v -> onDesafioClickListener.onDesafioClick(desafio));
+    }
+
+    private boolean hayNuevasExperiencias(Desafio desafio) {
+        // Verificar si la lista de experiencias es null
+        if (desafio.getExperiencias() == null) {
+            return false; // O manejarlo de otra manera según tu lógica
+        }
+
+        // Contar el número de experiencias en el desafío
+        int totalExperienciasDesafio = desafio.getExperiencias().size();
+
+        // Contar el número de experiencias que tiene el usuario
+        int totalExperienciasUsuario = experienciasDelUsuario.size();
+
+        // Comparar las cantidades
+        return totalExperienciasDesafio > totalExperienciasUsuario; // Hay nuevas experiencias si el desafío tiene más
     }
 
     @Override

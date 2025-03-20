@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/grafito"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="20dp">
+
+
+                <FrameLayout
+
+                    android:layout_width="320dp"
+                    android:layout_height="140dp"
+                    android:background="@drawable/borde"
+                    android:gravity="center"
+
+                    >
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:layout_width="315dp"
+                        android:layout_height="138dp"
+                        android:layout_marginStart="1.5dp"
+                        android:layout_marginTop="1dp"
+                        android:src="@drawable/bilbao"
+                        app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.ExtraSmall"
+                        android:scaleType="centerCrop"/>
+
+
+                    <TextView
+                        android:id="@+id/tvNombreDesafio"
+                        android:layout_marginTop="112.5dp"
+                        android:layout_marginStart="1.5dp"
+                        android:layout_width="316dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/fondo_blanco_invertido"
+                        android:text="101 Experiencias"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:textSize="20sp"
+                        android:textAlignment="textStart"
+
+
+                        />
+                </FrameLayout>
+
+
+
+
+</LinearLayout>

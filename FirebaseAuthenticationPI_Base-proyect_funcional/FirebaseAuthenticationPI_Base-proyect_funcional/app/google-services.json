@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "447379729778",
+    "firebase_url": "https://fir-authenticationpi-default-rtdb.firebaseio.com",
+    "project_id": "fir-authenticationpi",
+    "storage_bucket": "fir-authenticationpi.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:447379729778:android:a508c71b58c781af91c1eb",
+        "android_client_info": {
+          "package_name": "dam.pmdm.firebaseauthenticationpi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "447379729778-q19o489iseit340br8td626jp7m5miom.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCYBCKp3KDLXZ4d78mLcpYusrt7yOggEoI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "447379729778-q19o489iseit340br8td626jp7m5miom.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

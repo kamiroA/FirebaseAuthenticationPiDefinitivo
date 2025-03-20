@@ -1,22 +1,30 @@
 package dam.pmdm.firebaseauthenticationpi;
 
-import java.util.Map;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Desafio {
     private String descripcion;
     private String nombre;
-    private Map<String, Experiencia> experiencias;
+    private List<Experiencia> experiencias; // Cambiado a List
 
     public Desafio() {
         // Constructor vacío requerido para Firebase
+        this.experiencias = new ArrayList<>(); // Inicializar como lista vacía
     }
 
-    public Desafio(String descripcion, String nombre, Map<String, Experiencia> experiencias) {
+    public Desafio(String descripcion, String nombre, List<Experiencia> experiencias) {
         this.descripcion = descripcion;
         this.nombre = nombre;
-        this.experiencias = experiencias;
+        this.experiencias = new ArrayList<>(); // Inicializar como lista vacía
+        if (experiencias != null) {
+            for (Experiencia exp : experiencias) {
+                if (exp != null) { // Omitir el null
+                    this.experiencias.add(exp);
+                }
+            }
+        }
     }
-
     public String getDescripcion() {
         return descripcion;
     }
@@ -25,7 +33,7 @@ public class Desafio {
         return nombre;
     }
 
-    public Map<String, Experiencia> getExperiencias() {
+    public List<Experiencia> getExperiencias() {
         return experiencias;
     }
 }
