@@ -46,7 +46,7 @@ public class DesafioAdapter extends RecyclerView.Adapter<DesafioAdapter.DesafioV
     private boolean hayNuevasExperiencias(Desafio desafio) {
         // Verificar si la lista de experiencias es null
         if (desafio.getExperiencias() == null) {
-            return false; // O manejarlo de otra manera según tu lógica
+            return false; // No hay nuevas experiencias si la lista es null
         }
 
         // Contar el número de experiencias en el desafío

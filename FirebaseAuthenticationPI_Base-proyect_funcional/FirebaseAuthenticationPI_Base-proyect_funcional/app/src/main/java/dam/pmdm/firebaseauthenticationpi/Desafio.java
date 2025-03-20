@@ -4,36 +4,35 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Desafio {
-    private String descripcion;
     private String nombre;
-    private List<Experiencia> experiencias; // Cambiado a List
+    private String descripcion;
+    private List<Experiencia> experiencias; // Asegúrate de que esto sea una lista
 
     public Desafio() {
         // Constructor vacío requerido para Firebase
-        this.experiencias = new ArrayList<>(); // Inicializar como lista vacía
+        this.experiencias = new ArrayList<>(); // Inicializar la lista
     }
 
-    public Desafio(String descripcion, String nombre, List<Experiencia> experiencias) {
-        this.descripcion = descripcion;
+    public Desafio(String nombre, String descripcion, List<Experiencia> experiencias) {
         this.nombre = nombre;
-        this.experiencias = new ArrayList<>(); // Inicializar como lista vacía
-        if (experiencias != null) {
-            for (Experiencia exp : experiencias) {
-                if (exp != null) { // Omitir el null
-                    this.experiencias.add(exp);
-                }
-            }
-        }
-    }
-    public String getDescripcion() {
-        return descripcion;
+        this.descripcion = descripcion;
+        this.experiencias = (experiencias != null) ? experiencias : new ArrayList<>(); // Inicializar si es null
     }
 
     public String getNombre() {
         return nombre;
     }
 
+    public String getDescripcion() {
+        return descripcion;
+    }
+
     public List<Experiencia> getExperiencias() {
         return experiencias;
+    }
+
+    // Método para establecer la lista de experiencias
+    public void setExperiencias(List<Experiencia> experiencias) {
+        this.experiencias = experiencias;
     }
 }

@@ -12,18 +12,25 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:visibility="gone" /> <!-- Inicialmente oculto -->
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
 
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
         android:id="@+id/swipeRefreshLayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        >
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@drawable/borde_app"
             android:orientation="vertical"
+            android:gravity="center"
             app:layout_constraintTop_toTopOf="parent">
 
             <LinearLayout
@@ -80,7 +87,7 @@
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recyclerViewDesafios"
-                android:layout_width="match_parent"
+                android:layout_width="300dp"
                 android:layout_height="0dp"
                 android:layout_weight="1" /> <!-- Usar layout_weight para que ocupe el espacio restante -->
         </LinearLayout>
